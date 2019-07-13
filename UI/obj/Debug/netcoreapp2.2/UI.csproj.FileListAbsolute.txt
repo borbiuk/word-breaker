@@ -1,0 +1,16 @@
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\UI.deps.json
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\UI.runtimeconfig.json
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\UI.runtimeconfig.dev.json
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\UI.dll
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\UI.pdb
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\FileService.dll
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\FileService.pdb
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\obj\Debug\netcoreapp2.2\UI.csprojAssemblyReference.cache
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\obj\Debug\netcoreapp2.2\UI.csproj.CoreCompileInputs.cache
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\obj\Debug\netcoreapp2.2\UI.AssemblyInfoInputs.cache
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\obj\Debug\netcoreapp2.2\UI.AssemblyInfo.cs
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\obj\Debug\netcoreapp2.2\UI.csproj.CopyComplete
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\obj\Debug\netcoreapp2.2\UI.dll
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\obj\Debug\netcoreapp2.2\UI.pdb
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\WordBreaker.dll
+C:\Users\nazbo\Source\Repos\WordBreaker\UI\bin\Debug\netcoreapp2.2\WordBreaker.pdb
