@@ -1,6 +1,6 @@
 # Word Breaker
 
-![searching...]("man.gif")
+![searching...]("man.webp")
 
 Module for get meaningful parts of compound words.
 
