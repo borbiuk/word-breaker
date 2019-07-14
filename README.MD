@@ -60,4 +60,4 @@ Search by length and first two letters in HashTable minimize word list for Conta
 * The algorithm can be modified to get all subwords
 * Yhe algorithm can also be modified so as to receive first shorter or longer subword
 * Be careful to work with umlaut
-* If you have any remarks, let me know [emial](borbiuk.n@gmail.com)
+* If you have any remarks, let me know [(**Nazariy Borbiuk**)](borbiuk.n@gmail.com)
