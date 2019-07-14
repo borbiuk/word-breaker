@@ -1,6 +1,6 @@
 # Word Breaker
 
-![searching...]("https://media.giphy.com/media/3h2AeAOj83j7slRkyW/giphy.gif")
+![searching...](https://media.giphy.com/media/3h2AeAOj83j7slRkyW/giphy.gif)
 
 Module for get meaningful parts of compound words.
 
