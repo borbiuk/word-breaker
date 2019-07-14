@@ -9,7 +9,7 @@ namespace CLI
         static void Main()
         {
             var reader = new WordReader(path: @"..\..\..\dict");
-            var spliter = new WordBraker(words: reader.GetGermanyWords());
+            var breaker = new Breaker(words: reader.GetGermanyWords());
 
             while (true)
             {
@@ -19,7 +19,7 @@ namespace CLI
 
                 normalizeWord = normalizeWord.Trim().ToLower();
 
-                var result = spliter.GetSubWords(normalizeWord);
+                var result = breaker.GetSubWords(normalizeWord);
                 foreach (var item in result)
                 {
                     Console.WriteLine(string.Format("\t{0}", item));

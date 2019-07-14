@@ -9,12 +9,12 @@ namespace Tests
     [TestFixture]
     public class Tests
     {
-        private readonly WordBraker _service;
+        private readonly Breaker _service;
 
         public Tests()
         {
             var reader = new WordReader(path: @"..\..\..\dict");
-            _service = new WordBraker(words: reader.GetGermanyWords());
+            _service = new Breaker(words: reader.GetGermanyWords());
         }
 
         [Test]

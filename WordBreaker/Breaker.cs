@@ -2,17 +2,17 @@
 
 namespace WordBreaker
 {
-    public class WordBraker
+    public class Breaker
     {
         private readonly Dictionary<int, TCI> _indexedWords;
         private readonly int _sml;
 
         /// <summary>
-        /// Create new WordBraker service by input parameters.
+        /// Create new WordBreaker service by input parameters.
         /// </summary>
         /// <param name="words">Dictionary for comparisons.</param>
         /// <param name="subWordMinLength">Subword minimum length.</param>
-        public WordBraker(IEnumerable<string> words, int subWordMinLength = 3)
+        public Breaker(IEnumerable<string> words, int subWordMinLength = 3)
         {
             _indexedWords = new Dictionary<int, TCI>();
             _sml = subWordMinLength;
