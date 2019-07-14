@@ -1,9 +1,0 @@
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\bin\Debug\netcoreapp2.2\FileService.deps.json
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\bin\Debug\netcoreapp2.2\FileService.dll
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\bin\Debug\netcoreapp2.2\FileService.pdb
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\obj\Debug\netcoreapp2.2\FileService.csprojAssemblyReference.cache
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\obj\Debug\netcoreapp2.2\FileService.csproj.CoreCompileInputs.cache
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\obj\Debug\netcoreapp2.2\FileService.AssemblyInfoInputs.cache
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\obj\Debug\netcoreapp2.2\FileService.AssemblyInfo.cs
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\obj\Debug\netcoreapp2.2\FileService.dll
-C:\Users\nazbo\Source\Repos\WordBreaker\FileReader\obj\Debug\netcoreapp2.2\FileService.pdb

@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WordBreaker.Models
+namespace WordBreaker
 {
-    public class WordIndex : Dictionary<string, List<string>>
+    /// <summary>
+    /// Two Char Index - selected words by first two letter.
+    /// </summary>
+    internal class TCI : Dictionary<string, List<string>>
     {
         public void Insert(string word)
         {

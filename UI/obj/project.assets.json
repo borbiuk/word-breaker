@@ -208,16 +208,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "FileService/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/FileService.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FileService.dll": {}
-        }
-      },
       "WordBreaker/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -699,11 +689,6 @@
         "netstandard.library.nuspec"
       ]
     },
-    "FileService/1.0.0": {
-      "type": "project",
-      "path": "../FileReader/FileService.csproj",
-      "msbuildProject": "../FileReader/FileService.csproj"
-    },
     "WordBreaker/1.0.0": {
       "type": "project",
       "path": "../WordBreaker/WordBreaker.csproj",
@@ -712,7 +697,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "FileService >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "WordBreaker >= 1.0.0"
     ]
@@ -725,9 +709,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\UI\\UI.csproj",
-      "projectName": "UI",
-      "projectPath": "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\UI\\CLI.csproj",
+      "projectName": "CLI",
+      "projectPath": "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\UI\\CLI.csproj",
       "packagesPath": "C:\\Users\\nazbo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\UI\\obj\\",
       "projectStyle": "PackageReference",
@@ -750,9 +734,6 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\FileReader\\FileService.csproj": {
-              "projectPath": "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\FileReader\\FileService.csproj"
-            },
             "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\WordBreaker\\WordBreaker.csproj": {
               "projectPath": "C:\\Users\\nazbo\\Source\\Repos\\WordBreaker\\WordBreaker\\WordBreaker.csproj"
             }

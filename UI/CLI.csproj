@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FileReader\FileService.csproj" />
     <ProjectReference Include="..\WordBreaker\WordBreaker.csproj" />
   </ItemGroup>
 
