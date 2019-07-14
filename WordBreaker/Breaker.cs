@@ -35,7 +35,7 @@ namespace WordBreaker
                     _indexedWords[word.Length] = wordIndex;
                 }
 
-                wordIndex.Insert(word.ToLower());
+                wordIndex.Insert(word.Simplify());
             }
         }
 
@@ -44,6 +44,7 @@ namespace WordBreaker
         /// </summary>
         public IEnumerable<string> GetSubWords(string word)
         {
+            word.Simplify();
             var result = new List<string>();
 
             int i = 0;
@@ -59,7 +60,7 @@ namespace WordBreaker
                     {
                         if (wordIndex.Exist(subWord))
                         {
-                            result.Add(subWord);
+                            result.Add(subWord.ToUmlaut());
                             i += j - 1;
                             break;
                         }

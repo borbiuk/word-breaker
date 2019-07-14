@@ -1,7 +1,6 @@
 C:\Users\nazbo\Source\Repos\WordBreaker\WordBreaker\bin\Debug\netcoreapp2.2\WordBreaker.deps.json
 C:\Users\nazbo\Source\Repos\WordBreaker\WordBreaker\bin\Debug\netcoreapp2.2\WordBreaker.dll
 C:\Users\nazbo\Source\Repos\WordBreaker\WordBreaker\bin\Debug\netcoreapp2.2\WordBreaker.pdb
-C:\Users\nazbo\Source\Repos\WordBreaker\WordBreaker\obj\Debug\netcoreapp2.2\WordBreaker.csprojAssemblyReference.cache
 C:\Users\nazbo\Source\Repos\WordBreaker\WordBreaker\obj\Debug\netcoreapp2.2\WordBreaker.csproj.CoreCompileInputs.cache
 C:\Users\nazbo\Source\Repos\WordBreaker\WordBreaker\obj\Debug\netcoreapp2.2\WordBreaker.AssemblyInfoInputs.cache
 C:\Users\nazbo\Source\Repos\WordBreaker\WordBreaker\obj\Debug\netcoreapp2.2\WordBreaker.AssemblyInfo.cs

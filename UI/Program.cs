@@ -17,8 +17,6 @@ namespace CLI
 
                 if (string.IsNullOrEmpty(normalizeWord)) break;
 
-                normalizeWord = normalizeWord.Trim().ToLower();
-
                 var result = breaker.GetSubWords(normalizeWord);
                 foreach (var item in result)
                 {
