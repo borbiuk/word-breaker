@@ -55,9 +55,11 @@ where the int is the word length, the string is the first two characters and the
 
 Search by length and first two letters in HashTable minimize word list for Contains() method. This significantly speeds up the program.
 
+*****
+
 ## Notes
 
 * The algorithm can be modified to get all subwords
 * Yhe algorithm can also be modified so as to receive first shorter or longer subword
 * Be careful to work with umlaut
-* If you have any remarks, let me know [(**Nazariy Borbiuk**)](borbiuk.n@gmail.com)
+* If you have any remarks, let me know [(**Nazariy Borbiuk**)]("borbiuk.n@gmail.com")
