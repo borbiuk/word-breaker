@@ -6,8 +6,11 @@ namespace WordBreaker
 	/// <summary>
 	/// Two Char Index - selected words by first two letter.
 	/// </summary>
-	internal class TCI : Dictionary<string, List<string>>
+	internal class Tci : Dictionary<string, List<string>>
 	{
+		private const string WordLengthExceptionMessage =
+			"Word index length must must contain more than two characters.";
+
 		/// <summary>
 		/// Add <paramref name="word"/> to current TCI(<see cref="KeyValuePair"/>).
 		/// </summary>
@@ -15,7 +18,7 @@ namespace WordBreaker
 		public void Insert(string word)
 		{
 			if (word.Length < 2) throw new ArgumentOutOfRangeException(
-				"Word index length must must contain more than two characters.");
+				WordLengthExceptionMessage);
 
 			if (!TryGetValue(word.Substring(0, 2), out List<string> words))
 			{
@@ -34,12 +37,10 @@ namespace WordBreaker
 		public bool Exist(string word)
 		{
 			if (word.Length < 2) throw new ArgumentOutOfRangeException(
-				"Word index length must must contain more than two characters.");
+				WordLengthExceptionMessage);
 
-			if (TryGetValue(word.Substring(0, 2), out List<string> words))
-				return words.Contains(word);
-
-			return false;
+			return TryGetValue(word.Substring(0, 2), out var words)
+				   && words.Contains(word);
 		}
 	}
 }

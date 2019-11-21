@@ -1,15 +1,14 @@
-﻿namespace WordBreaker
+﻿namespace WordBreaker.Services
 {
-	internal static class Validator
+	internal static class ValidatorService
 	{
 		public static string Simplify(this string word)
 		{
-			word = word.Trim()
-					   .ToLower()
-					   .Replace('ä', '0')
-					   .Replace('ö', '1')
-					   .Replace('ü', '2')
-					   .Replace('ß', '3');
+			word = word.Trim().ToLower()
+						.Replace('ä', '0')
+						.Replace('ö', '1')
+						.Replace('ü', '2')
+						.Replace('ß', '3');
 
 			return word;
 		}

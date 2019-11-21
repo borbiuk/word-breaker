@@ -1,12 +1,15 @@
-﻿using WordBreaker;
-using System;
+﻿using System;
+
 using CLI.FileService;
+
+using WordBreaker.WordBreackers.Implementations;
+using WordBreaker.WordBreackers.Interfaces;
 
 namespace CLI
 {
-	class Program
+	internal class Program
 	{
-		static void Main()
+		private static void Main()
 		{
 			var reader = new WordReader(path: @"..\..\..\dict");
 			IWordBreacker breaker = new GermanBreaker(words: reader.GetGermanyWords());
@@ -20,7 +23,7 @@ namespace CLI
 
 				var result = breaker.GetSubWords(normalizeWord);
 				foreach (var item in result)
-					Console.WriteLine(string.Format("\t{0}", item));
+					Console.WriteLine($"\t{item}");
 			}
 		}
 	}

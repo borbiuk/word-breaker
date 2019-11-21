@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WordBreaker
+namespace WordBreaker.WordBreackers.Interfaces
 {
 	/// <summary>
 	/// Provides decomposition of compound words into sub-words.
@@ -8,7 +8,7 @@ namespace WordBreaker
 	public interface IWordBreacker
 	{
 		/// <summary>
-		/// Get subwords if exists.
+		/// Get sub-words if exists.
 		/// </summary>
 		IEnumerable<string> GetSubWords(string word);
 	}

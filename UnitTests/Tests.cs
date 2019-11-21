@@ -1,8 +1,9 @@
-﻿using CLI.FileService;
-using NUnit.Framework;
-using System;
+﻿using NUnit.Framework;
+
+using CLI.FileService;
+
 using System.Linq;
-using WordBreaker;
+using WordBreaker.WordBreackers.Implementations;
 
 namespace Tests
 {
