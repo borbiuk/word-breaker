@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace WordBreaker.WordBreackers.Interfaces
+namespace WordBreaker.WordBreakers.Interfaces
 {
 	/// <summary>
 	/// Provides decomposition of compound words into sub-words.
 	/// </summary>
-	public interface IWordBreacker
+	public interface IWordBreaker
 	{
 		/// <summary>
 		/// Get sub-words if exists.

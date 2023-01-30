@@ -1,11 +1,9 @@
-﻿using NUnit.Framework;
-
+﻿using System.Linq;
 using CLI.FileService;
+using NUnit.Framework;
+using WordBreaker.WordBreakers.Implementations;
 
-using System.Linq;
-using WordBreaker.WordBreackers.Implementations;
-
-namespace Tests
+namespace UnitTests
 {
 	[TestFixture]
 	public class Tests
@@ -14,7 +12,7 @@ namespace Tests
 
 		public Tests()
 		{
-			var reader = new WordReader(path: @"..\..\..\dict");
+			var reader = new WordReader(path: @"../../../dict");
 			_service = new GermanBreaker(words: reader.GetGermanyWords());
 		}
 
@@ -22,13 +20,13 @@ namespace Tests
 		public void Krankenhaus()
 		{
 			//Arrange
-			var word = "krankenhaus";
+			const string word = "krankenhaus";
 
 			// Action
-			var subWords = _service.GetSubWords(word);
+			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Count() == 2);
+			Assert.IsTrue(subWords.Length == 2);
 			Assert.IsTrue(subWords.Contains("kranken"));
 			Assert.IsTrue(subWords.Contains("haus"));
 		}
@@ -37,13 +35,13 @@ namespace Tests
 		public void KrankenhausWithWhitespaces()
 		{
 			//Arrange
-			var word = "\n krankenhaus\t";
+			const string word = "\n krankenhaus\t";
 
 			// Action
-			var subWords = _service.GetSubWords(word);
+			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Count() == 2);
+			Assert.IsTrue(subWords.Length == 2);
 			Assert.IsTrue(subWords.Contains("kranken"));
 			Assert.IsTrue(subWords.Contains("haus"));
 		}
@@ -52,13 +50,13 @@ namespace Tests
 		public void KrankenhausWithWhitespacesBetween()
 		{
 			//Arrange
-			var word = "kranken\t\nhaus";
+			const string word = "kranken\t\nhaus";
 
 			// Action
-			var subWords = _service.GetSubWords(word);
+			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Count() == 2);
+			Assert.IsTrue(subWords.Length == 2);
 			Assert.IsTrue(subWords.Contains("kranken"));
 			Assert.IsTrue(subWords.Contains("haus"));
 		}
@@ -67,13 +65,13 @@ namespace Tests
 		public void Kranken()
 		{
 			//Arrange
-			var word = "kranken";
+			const string word = "kranken";
 
 			// Action
-			var subWords = _service.GetSubWords(word);
+			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Count() == 1);
+			Assert.IsTrue(subWords.Length == 1);
 			Assert.IsTrue(subWords.Contains("kranken"));
 		}
 
@@ -81,26 +79,26 @@ namespace Tests
 		public void WordWithUpperCaseLetterReturnsEmptyList()
 		{
 			//Arrange
-			var word = "haUs";
+			const string word = "haUs";
 
 			// Action
-			var subWords = _service.GetSubWords(word);
+			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Count() == 0);
+			Assert.IsTrue(subWords.Length == 0);
 		}
 
 		[Test]
 		public void WordWithoutSubWordsReturnsCurrentWord()
 		{
 			//Arrange
-			var word = "haus";
+			const string word = "haus";
 
 			// Action
-			var subWords = _service.GetSubWords(word);
+			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Count() == 1);
+			Assert.IsTrue(subWords.Length == 1);
 			Assert.AreEqual(word, subWords.FirstOrDefault());
 		}
 	}

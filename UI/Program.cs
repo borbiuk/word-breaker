@@ -1,9 +1,7 @@
 ﻿using System;
-
 using CLI.FileService;
-
-using WordBreaker.WordBreackers.Implementations;
-using WordBreaker.WordBreackers.Interfaces;
+using WordBreaker.WordBreakers.Implementations;
+using WordBreaker.WordBreakers.Interfaces;
 
 namespace CLI
 {
@@ -11,8 +9,8 @@ namespace CLI
 	{
 		private static void Main()
 		{
-			var reader = new WordReader(path: @"..\..\..\dict");
-			IWordBreacker breaker = new GermanBreaker(words: reader.GetGermanyWords());
+			var reader = new WordReader(path: @"../../../dict");
+			IWordBreaker breaker = new GermanBreaker(words: reader.GetGermanyWords());
 
 			while (true)
 			{
@@ -23,7 +21,7 @@ namespace CLI
 
 				var result = breaker.GetSubWords(normalizeWord);
 				foreach (var item in result)
-					Console.WriteLine($"\t{item}");
+					Console.WriteLine($"  - {item}");
 			}
 		}
 	}

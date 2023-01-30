@@ -1,26 +1,23 @@
 ﻿using System.Collections.Generic;
 
 using WordBreaker.Services;
-using WordBreaker.WordBreackers.Interfaces;
+using WordBreaker.WordBreakers.Interfaces;
 
-namespace WordBreaker.WordBreackers.Implementations
+namespace WordBreaker.WordBreakers.Implementations
 {
 	/// <summary>
 	/// Provides decomposition of german compound words into sub-words.
 	/// </summary>
-	public class GermanBreaker : IWordBreacker
+	public class GermanBreaker : IWordBreaker
 	{
-		private readonly Dictionary<int, Tci> _indexedWords;
+		private readonly Dictionary<int, Index> _indexedWords;
 		private readonly int _sml;
 
-		/// <summary>
-		/// Create new WordBreaker service by input parameters.
-		/// </summary>
 		/// <param name="words">Dictionary for comparisons.</param>
 		/// <param name="subWordMinLength">Sub-word minimum length.</param>
 		public GermanBreaker(IEnumerable<string> words, int subWordMinLength = 3)
 		{
-			_indexedWords = new Dictionary<int, Tci>();
+			_indexedWords = new Dictionary<int, Index>();
 			_sml = subWordMinLength;
 
 			SetDictionary(words);
@@ -38,7 +35,7 @@ namespace WordBreaker.WordBreackers.Implementations
 
 				if (!_indexedWords.TryGetValue(word.Length, out var wordIndex))
 				{
-					wordIndex = new Tci();
+					wordIndex = new Index();
 					_indexedWords[word.Length] = wordIndex;
 				}
 

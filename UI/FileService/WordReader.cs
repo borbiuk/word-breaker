@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace CLI.FileService
 {
-	public class WordReader
+	public partial class WordReader
 	{
 		private readonly string _path;
 
@@ -17,8 +17,7 @@ namespace CLI.FileService
 		{
 			if (!File.Exists(path))
 			{
-				throw new ArgumentException(
-					string.Format("File by path \"{0}\" not found.", path));
+				throw new ArgumentException($"File by path \"{path}\" not found.", nameof(path));
 			}
 
 			_path = path;
@@ -26,14 +25,14 @@ namespace CLI.FileService
 
 		public IEnumerable<string> GetGermanyWords()
 		{
-			using (var stream = new FileStream(_path, FileMode.Open, FileAccess.Read))
-			{
-				using (var reader = new StreamReader(stream, Encoding.UTF8))
-				{
-					return Regex.Split(reader.ReadToEnd(), @"([A-Z][a-zÄÖÜäöüẞß]*)")
-								.Select(w => w.Trim());
-				}
-			}
+			using var stream = new FileStream(_path, FileMode.Open, FileAccess.Read);
+			using var reader = new StreamReader(stream, Encoding.UTF8);
+			return MyRegex()
+				.Split(reader.ReadToEnd())
+				.Select(w => w.Trim());
 		}
+
+		[GeneratedRegex("([A-Z][a-zÄÖÜäöüẞß]*)")]
+		private static partial Regex MyRegex();
 	}
 }
