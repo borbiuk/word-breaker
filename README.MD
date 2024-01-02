@@ -4,14 +4,13 @@ Module for get meaningful parts of compound words.
 
 ## Example
 
-* "krankenhaus" => {"kranken", "haus"}
-* "haus" => {"haus"}
+![example](example.png)
 
 ## Algorithm
 
-The algorithm is based on the comparison of words with the dictionary. A dictionary is a large set of words, it used for comparison. The minimum possible length for a subword is equal 3, to exclude extra iterations and non-valued subwords.
+The algorithm is based on the comparison of words with the dictionary. A dictionary is a large set of words, it used for comparison. The minimum possible length for a subword is equal `3`, to exclude extra iterations and non-valued subwords.
 
-**Simple:**
+### **Simple:**
 
 ```csharp
 for each compound {
@@ -23,7 +22,7 @@ for each compound {
 }
 ```
 
-**Advanced:**
+### **Advanced:**
 
 ```csharp
 for each compound {
@@ -49,13 +48,13 @@ The resulting data structure consists of word lists indexed by two properties:
 Dictionary<int, Dictionary<string, List<string>>>
 ```
 
-where the int is the word length, the string is the first two characters and the lists contain the suitable words.
+*where the int is the word length, the string is the first two characters and the lists contain the suitable words.*
 
-Search by length and first two letters in HashTable minimize word list for Contains() method. This significantly speeds up the program.
+Search by length and first two letters in `HashTable` minimize word list for `Contains()` method. This significantly speeds up the program.
 
 ## Notes
 
 * The algorithm can be modified to get all subwords
-* Yhe algorithm can also be modified so as to receive first shorter or longer subword
+* The algorithm can also be modified to receive first shorter or longer subword
 * Be careful to work with umlaut
 * If you have any remarks, let me know
