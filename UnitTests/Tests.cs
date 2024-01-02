@@ -3,103 +3,102 @@ using CLI.FileService;
 using NUnit.Framework;
 using WordBreaker.WordBreakers.Implementations;
 
-namespace UnitTests
+namespace UnitTests;
+
+[TestFixture]
+public class Tests
 {
-	[TestFixture]
-	public class Tests
-	{
-		private readonly GermanBreaker _service;
+    private readonly GermanBreaker _service;
 
-		public Tests()
-		{
-			var reader = new WordReader(path: @"../../../dict");
-			_service = new GermanBreaker(words: reader.GetGermanyWords());
-		}
+    public Tests()
+    {
+        var reader = new WordReader(path: @"../../../dict");
+        _service = new GermanBreaker(words: reader.GetGermanyWords());
+    }
 
-		[Test]
-		public void Krankenhaus()
-		{
-			//Arrange
-			const string word = "krankenhaus";
+    [Test]
+    public void Krankenhaus()
+    {
+        //Arrange
+        const string word = "krankenhaus";
 
-			// Action
-			var subWords = _service.GetSubWords(word).ToArray();
+        // Action
+        var subWords = _service.GetSubWords(word).ToArray();
 
-			//Assert
-			Assert.That(subWords.Length == 2);
-			Assert.That(subWords.Contains("kranken"));
-			Assert.That(subWords.Contains("haus"));
-		}
+        //Assert
+        Assert.That(subWords.Length == 2);
+        Assert.That(subWords.Contains("kranken"));
+        Assert.That(subWords.Contains("haus"));
+    }
 
-		[Test]
-		public void KrankenhausWithWhitespaces()
-		{
-			//Arrange
-			const string word = "\n krankenhaus\t";
+    [Test]
+    public void KrankenhausWithWhitespaces()
+    {
+        //Arrange
+        const string word = "\n krankenhaus\t";
 
-			// Action
-			var subWords = _service.GetSubWords(word).ToArray();
+        // Action
+        var subWords = _service.GetSubWords(word).ToArray();
 
-			//Assert
-			Assert.That(subWords.Length == 2);
-			Assert.That(subWords.Contains("kranken"));
-			Assert.That(subWords.Contains("haus"));
-		}
+        //Assert
+        Assert.That(subWords.Length == 2);
+        Assert.That(subWords.Contains("kranken"));
+        Assert.That(subWords.Contains("haus"));
+    }
 
-		[Test]
-		public void KrankenhausWithWhitespacesBetween()
-		{
-			//Arrange
-			const string word = "kranken\t\nhaus";
+    [Test]
+    public void KrankenhausWithWhitespacesBetween()
+    {
+        //Arrange
+        const string word = "kranken\t\nhaus";
 
-			// Action
-			var subWords = _service.GetSubWords(word).ToArray();
+        // Action
+        var subWords = _service.GetSubWords(word).ToArray();
 
-			//Assert
-			Assert.That(subWords.Length == 2);
-			Assert.That(subWords.Contains("kranken"));
-			Assert.That(subWords.Contains("haus"));
-		}
+        //Assert
+        Assert.That(subWords.Length == 2);
+        Assert.That(subWords.Contains("kranken"));
+        Assert.That(subWords.Contains("haus"));
+    }
 
-		[Test]
-		public void Kranken()
-		{
-			//Arrange
-			const string word = "kranken";
+    [Test]
+    public void Kranken()
+    {
+        //Arrange
+        const string word = "kranken";
 
-			// Action
-			var subWords = _service.GetSubWords(word).ToArray();
+        // Action
+        var subWords = _service.GetSubWords(word).ToArray();
 
-			//Assert
-			Assert.That(subWords.Length == 1);
-			Assert.That(subWords.Contains("kranken"));
-		}
+        //Assert
+        Assert.That(subWords.Length == 1);
+        Assert.That(subWords.Contains("kranken"));
+    }
 
-		[Test]
-		public void WordWithUpperCaseLetterReturnsEmptyList()
-		{
-			//Arrange
-			const string word = "haUs";
+    [Test]
+    public void WordWithUpperCaseLetterReturnsEmptyList()
+    {
+        //Arrange
+        const string word = "haUs";
 
-			// Action
-			var subWords = _service.GetSubWords(word).ToArray();
+        // Action
+        var subWords = _service.GetSubWords(word).ToArray();
 
-			//Assert
-			Assert.That(subWords.Length == 0);
-		}
+        //Assert
+        Assert.That(subWords.Length == 0);
+    }
 
-		[Test]
-		public void WordWithoutSubWordsReturnsCurrentWord()
-		{
-			//Arrange
-			const string word = "haus";
+    [Test]
+    public void WordWithoutSubWordsReturnsCurrentWord()
+    {
+        //Arrange
+        const string word = "haus";
 
-			// Action
-			var subWords = _service.GetSubWords(word).ToArray();
+        // Action
+        var subWords = _service.GetSubWords(word).ToArray();
 
-			//Assert
-			Assert.That(subWords.Length == 1);
-			Assert.That(subWords.FirstOrDefault(), Is.EqualTo(word));
-		}
-	}
+        //Assert
+        Assert.That(subWords.Length == 1);
+        Assert.That(subWords.FirstOrDefault(), Is.EqualTo(word));
+    }
 }

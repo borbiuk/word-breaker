@@ -3,26 +3,25 @@ using CLI.FileService;
 using WordBreaker.WordBreakers.Implementations;
 using WordBreaker.WordBreakers.Interfaces;
 
-namespace CLI
+namespace CLI;
+
+internal class Program
 {
-	internal class Program
-	{
-		private static void Main()
-		{
-			var reader = new WordReader(path: @"../../../dict");
-			IWordBreaker breaker = new GermanBreaker(words: reader.GetGermanyWords());
+    private static void Main()
+    {
+        var reader = new WordReader(path: @"../../../dict");
+        IWordBreaker breaker = new GermanBreaker(words: reader.GetGermanyWords());
 
-			while (true)
-			{
-				var normalizeWord = Console.ReadLine();
+        while (true)
+        {
+            var normalizeWord = Console.ReadLine();
 
-				if (string.IsNullOrEmpty(normalizeWord))
-					break;
+            if (string.IsNullOrEmpty(normalizeWord))
+                break;
 
-				var result = breaker.GetSubWords(normalizeWord);
-				foreach (var item in result)
-					Console.WriteLine($"  - {item}");
-			}
-		}
-	}
+            var result = breaker.GetSubWords(normalizeWord);
+            foreach (var item in result)
+                Console.WriteLine($"  - {item}");
+        }
+    }
 }
