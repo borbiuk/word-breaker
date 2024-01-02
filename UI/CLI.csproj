@@ -14,4 +14,10 @@
         <PackageReference Include="Cocona" Version="2.2.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="..\README.MD">
+        <Link>README.MD</Link>
+      </Content>
+    </ItemGroup>
+
 </Project>
