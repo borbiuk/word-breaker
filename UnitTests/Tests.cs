@@ -26,9 +26,9 @@ namespace UnitTests
 			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Length == 2);
-			Assert.IsTrue(subWords.Contains("kranken"));
-			Assert.IsTrue(subWords.Contains("haus"));
+			Assert.That(subWords.Length == 2);
+			Assert.That(subWords.Contains("kranken"));
+			Assert.That(subWords.Contains("haus"));
 		}
 
 		[Test]
@@ -41,9 +41,9 @@ namespace UnitTests
 			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Length == 2);
-			Assert.IsTrue(subWords.Contains("kranken"));
-			Assert.IsTrue(subWords.Contains("haus"));
+			Assert.That(subWords.Length == 2);
+			Assert.That(subWords.Contains("kranken"));
+			Assert.That(subWords.Contains("haus"));
 		}
 
 		[Test]
@@ -56,9 +56,9 @@ namespace UnitTests
 			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Length == 2);
-			Assert.IsTrue(subWords.Contains("kranken"));
-			Assert.IsTrue(subWords.Contains("haus"));
+			Assert.That(subWords.Length == 2);
+			Assert.That(subWords.Contains("kranken"));
+			Assert.That(subWords.Contains("haus"));
 		}
 
 		[Test]
@@ -71,8 +71,8 @@ namespace UnitTests
 			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Length == 1);
-			Assert.IsTrue(subWords.Contains("kranken"));
+			Assert.That(subWords.Length == 1);
+			Assert.That(subWords.Contains("kranken"));
 		}
 
 		[Test]
@@ -85,7 +85,7 @@ namespace UnitTests
 			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Length == 0);
+			Assert.That(subWords.Length == 0);
 		}
 
 		[Test]
@@ -98,8 +98,8 @@ namespace UnitTests
 			var subWords = _service.GetSubWords(word).ToArray();
 
 			//Assert
-			Assert.IsTrue(subWords.Length == 1);
-			Assert.AreEqual(word, subWords.FirstOrDefault());
+			Assert.That(subWords.Length == 1);
+			Assert.That(subWords.FirstOrDefault(), Is.EqualTo(word));
 		}
 	}
 }
