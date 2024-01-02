@@ -2,9 +2,7 @@
 
 Module for get meaningful parts of compound words.
 
-![searching...](https://media.giphy.com/media/3h2AeAOj83j7slRkyW/giphy.gif)
-
-## Exapmle
+## Example
 
 * "krankenhaus" => {"kranken", "haus"}
 * "haus" => {"haus"}
